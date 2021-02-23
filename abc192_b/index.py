@@ -1,9 +1,4 @@
 s = input()
-result = True
-for i in range(len(s)):
-    if (i+1) % 2 == 1 and s[i].isupper():
-        result = False
-    if (i+1) % 2 == 0 and s[i].islower():
-        result = False
-
-print('Yes' if result else 'No')
+S = s[1::2]+'A'
+s = s[::2]+'a'
+print("Yes" if S.isupper() and s.islower() else "No")

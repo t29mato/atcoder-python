@@ -10,9 +10,9 @@ for n in range(N):
     else:
         r_list.append(s[1:])
 
-for s in l_list:
-    if s in r_list:
-        print(s)
-        break
+c_list = list(set(l_list) & set(r_list))
+if len(c_list) > 0:
+    print(c_list[0])
 else:
     print('satisfiable')
+    
